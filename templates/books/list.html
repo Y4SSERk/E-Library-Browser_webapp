@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}List{% endblock %}
+{% block content %}
+    {% for book in books %}
+        <div class="book-item">
+            <h2>{{ book.title }}</h2>
+            <p>Author: {{ book.author }}</p>
+            <p>Published: {{ book.publication_date }}</p>
+            <p>ISBN: {{ book.isbn }}</p>
+        </div>
+    {% endfor %}
+    {% if books|length == 0 %}
+        <p>No books available.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Map{% endblock %}
+
+{% block extra_css %}
+<style>
+  svg path:hover {
+    fill: #d6a9e7;
+    cursor: pointer;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+  {% include 'includes/svg/world-map.svg' %}
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  document.querySelectorAll('path').forEach(function (path) {
+      path.addEventListener('mouseenter', function () {
+          var countryName = this.getAttribute('name') ? this.getAttribute('name') : this.getAttribute('class');
+          console.log('on: ' + countryName);
+      });
+      path.addEventListener('click', function () {
+          var countryName = this.getAttribute('name') ? this.getAttribute('name') : this.getAttribute('class');
+          alert('Clicked on: ' + countryName);
+      });
+  });
+</script>
+{% endblock %}
