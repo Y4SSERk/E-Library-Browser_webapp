@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-# from apps.books.models import Book
+# from apps.books_api.models import Book
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
