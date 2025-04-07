@@ -8,7 +8,8 @@ urlpatterns = [
     path('profile', views.profile, name='profile'),
     path('profile/edit', views.edit_profile, name='edit_profile'),
 
-    path('shelf/saved', views.saved, name='saved'),
-    path('shelf/borrowed', views.borrowed, name='borrowed'),
-    path('shelf/purchased', views.purchased, name='purchased'),
+    path('shelves/saved/', views.saved, name='saved_shelf'),
+    path('shelves/borrowed/', views.borrowed, name='borrowed_shelf'),
+    path('shelves/purchased/', views.purchased, name='purchased_shelf'),
+    path('shelves/create/', views.create_shelf, name='create_shelf'),
 ]

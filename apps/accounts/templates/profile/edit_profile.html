@@ -1,1 +1,8 @@
 <h2>edit profile</h2>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ user_form }}
+    {{ profile_form }}
+    <button type="submit">edit profile</button>
+</form>
