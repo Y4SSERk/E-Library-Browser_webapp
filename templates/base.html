@@ -7,18 +7,19 @@
     <title>{% block title %}Base{% endblock %}</title>
 
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    <link rel="stylesheet" href="{% static 'bootstrap-4.0.0-dist/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2-dist/css/bootstrap.min.css' %}">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
     
     {% include 'includes/navbar.html' %}  
-    {% block content %}{% endblock %}
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
     {% include 'includes/footer.html' %}  
 
-    <script src="{% static 'bootstrap-4.0.0-dist/js/popper.min.js' %}"></script>
-    <script src="{% static 'bootstrap-4.0.0-dist/js/jquery-3.7.1.min.js' %}"></script>
-    <script src="{% static 'bootstrap-4.0.0-dist/js/bootstrap.js' %}"></script>
+    <script src="{% static 'bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'bootstrap-5.0.2-dist/js/jquery-3.7.1.min.js' %}"></script>
     {% block extra_js %}{% endblock %}
 </body>
 </html>
